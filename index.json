@@ -7,41 +7,41 @@
 	{
 		"link": "1-overview/README.md",
 		"char_ofs": 41,
-		"byte_ofs": 75
+		"byte_ofs": 85
 	},
 	{
 		"link": "2-how-to-use/README.md",
 		"char_ofs": 49,
-		"byte_ofs": 91
+		"byte_ofs": 101
 	},
 	{
 		"link": "2-how-to-use/1-setting.md",
 		"char_ofs": 61,
-		"byte_ofs": 116
+		"byte_ofs": 126
 	},
 	{
 		"link": "2-how-to-use/2-monitoring.md",
 		"char_ofs": 1416,
-		"byte_ofs": 2899
+		"byte_ofs": 2909
 	},
 	{
 		"link": "2-how-to-use/3-job-editing.md",
 		"char_ofs": 1539,
-		"byte_ofs": 3138
+		"byte_ofs": 3148
 	},
 	{
 		"link": "appendices/README.md",
 		"char_ofs": 1871,
-		"byte_ofs": 3826
+		"byte_ofs": 3836
 	},
 	{
 		"link": "appendices/rules-occupational-safety.md",
 		"char_ofs": 1882,
-		"byte_ofs": 3849
+		"byte_ofs": 3859
 	},
 	{
 		"link": "quality-assurance.md",
 		"char_ofs": 2102,
-		"byte_ofs": 4247
+		"byte_ofs": 4257
 	}
 ]
