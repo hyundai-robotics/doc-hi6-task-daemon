@@ -8,7 +8,7 @@
     "variables": {
         "cont_model": "Hi6"
     },
-    "docId": "HI7TASKDAEMON_KO_001",
+    "docId": "HI6TASKDAEMON_KO_001",
     "references": [
         { "rpath" : "doc-hi6-operation/korean-Hi6-tp630" }
     ]

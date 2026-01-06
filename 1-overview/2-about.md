@@ -26,7 +26,7 @@ TaskDaemon 기능은 아래와 같은 제약이 있습니다.
 - 아래와 같은 기타 명령문들은 대부분 동작하지 않습니다.
 
 ```python
-cowork, axisctrl, filter, brake_check, gasp_check, softxyz, OnLTrack, fctrl, softjoint, toolchng, load_esti, 등...
+cowork, axisctrl, filter, brake_check, gasp_check, softxyz, fctrl, softjoint, toolchng, load_esti, 등...
 ```
 
 - 아래와 같은 로봇 응용 명령문들은 대부분 동작하지 않습니다.
