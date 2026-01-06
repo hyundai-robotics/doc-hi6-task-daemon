@@ -1,5 +1,5 @@
-﻿# 산업안전보건기준에 관한 규칙 및 안전검사 고시
+# Rules and Notices on Occupational Safety and Health Standards
 
-당해 산업용 로봇은 산업안전보건기준에 관한 규칙 및 안전검사 고시(검사 대상일 경우)의 검사 기준을 고려하여 설치하여야 한다.
+The industrial robot in question must be installed considering the inspection criteria of the Rules and Notices on Occupational Safety and Health Standards (in case of inspection target).
 
-"[산업안전보건기준에 관한 규칙](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"

@@ -6,52 +6,52 @@
 	},
 	{
 		"link": "1-overview/README.md",
-		"char_ofs": 41,
-		"byte_ofs": 85
+		"char_ofs": 52,
+		"byte_ofs": 62
 	},
 	{
 		"link": "1-overview/1-prerequisite.md",
-		"char_ofs": 49,
-		"byte_ofs": 101
+		"char_ofs": 65,
+		"byte_ofs": 75
 	},
 	{
 		"link": "1-overview/2-about.md",
-		"char_ofs": 199,
-		"byte_ofs": 365
+		"char_ofs": 279,
+		"byte_ofs": 309
 	},
 	{
 		"link": "2-how-to-use/README.md",
-		"char_ofs": 1263,
-		"byte_ofs": 2382
+		"char_ofs": 1958,
+		"byte_ofs": 1988
 	},
 	{
 		"link": "2-how-to-use/1-setting.md",
-		"char_ofs": 1275,
-		"byte_ofs": 2407
+		"char_ofs": 1973,
+		"byte_ofs": 2003
 	},
 	{
 		"link": "2-how-to-use/2-monitoring.md",
-		"char_ofs": 2649,
-		"byte_ofs": 5209
+		"char_ofs": 4296,
+		"byte_ofs": 4326
 	},
 	{
 		"link": "2-how-to-use/3-job-editing.md",
-		"char_ofs": 2772,
-		"byte_ofs": 5448
+		"char_ofs": 4497,
+		"byte_ofs": 4527
 	},
 	{
 		"link": "appendices/README.md",
-		"char_ofs": 3104,
-		"byte_ofs": 6136
+		"char_ofs": 5118,
+		"byte_ofs": 5148
 	},
 	{
 		"link": "appendices/rules-occupational-safety.md",
-		"char_ofs": 3115,
-		"byte_ofs": 6159
+		"char_ofs": 5130,
+		"byte_ofs": 5160
 	},
 	{
 		"link": "quality-assurance.md",
-		"char_ofs": 3335,
-		"byte_ofs": 6557
+		"char_ofs": 5536,
+		"byte_ofs": 5566
 	}
 ]

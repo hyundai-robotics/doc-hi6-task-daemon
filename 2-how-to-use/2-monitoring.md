@@ -1,5 +1,5 @@
-﻿# 2.2. 모니터링
+# 2.2. Monitoring
 
-![태스크 데몬 모니터링](../_assets/monitoring.png)
+![Task daemon monitoring](../_assets/monitoring.png)
 
-`창조정 - [F1: 선택] - 멀티태스크` 모니터링 창에서 태스크 데몬의 현재 프로그램 카운터를 확인할 수 있습니다.
+In the `pane layout - [F1: select] - multitask` monitoring window, you can check the current program counter of the task daemon.

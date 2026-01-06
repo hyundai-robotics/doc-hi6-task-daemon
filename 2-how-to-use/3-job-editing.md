@@ -1,9 +1,9 @@
-﻿# 2.3. job 편집
+# 2.3. Editing jobs
 
-태스크 데몬의 메인 job 프로그램이나 서브 job 프로그램들은 자유롭게 편집할 수 있습니다. 다만 이 프로그램들이 호출 스택에 있을 때(즉, 실행 중에 있을 때)에 명령문 삽입/삭제를 수행하면, 아래와 같은 확인 대화상자가 나타납니다.
+The main job program or sub job programs of the task daemon can be edited freely. However, if you perform command insertion/deletion while these programs are in the call stack (i.e., while they are running), a confirmation dialog like the one below will appear.
 
-![정지 및 리셋 확인 대화상자](../_assets/stop_reset_dialog.png)
+![Stop and Reset Confirmation Dialog](../_assets/stop_reset_dialog.png)
 
-`[ENTER]` 키를 누르면, 해당 태스크 데몬이 정지 및 리셋됩니다. `[ESC]` 키를 누르면, 편집이 취소됩니다.
+Pressing the `[ENTER]` key will stop and reset the corresponding task daemon. Pressing the `[ESC]` key will cancel the editing.
 
-또한 호출 스택에 있는 job 프로그램을 삭제하면, 해당 daemon 실행이 동작이 중단되고 초기화됩니다.
+Additionally, if you delete a job program that is in the call stack, the corresponding daemon execution will be halted and initialized.
