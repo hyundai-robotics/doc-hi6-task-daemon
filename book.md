@@ -1,10 +1,18 @@
-﻿# Hi6 로봇제어기 기능설명서 - 태스크 데몬 (Task Daemon)
+﻿
+[__SOURCE](README.md)
+# Hi6 로봇제어기 기능설명서 - 태스크 데몬 (Task Daemon)
+
+[__SOURCE](1-overview/README.md)
 # 1. 개요
+
+[__SOURCE](1-overview/1-prerequisite.md)
 # 1.1 사전지식
 
 본 설명서를 잘 이해하기 위해서는 아래의 지식을 갖추고 있어야 합니다.
 
 * [Hi6 로봇제어기 조작설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-Hi6-tp630/README)
+
+[__SOURCE](1-overview/2-about.md)
 # 1.2 태스크 데몬 (Task Daemon) 기능에 대해서
 
 {% hint style="info" %}
@@ -45,8 +53,12 @@ arcon, lvs, multipass, cv.wait, heightsen, 등...
 - TaskDaemon으로 실행 중인 job을 편집하면, 경우에 따라 해당 태스크의 daemon 실행은 정지할 수도 있습니다.
 
 {% endhint %}
+
+[__SOURCE](2-how-to-use/README.md)
 # 2. 사용 방법
 
+
+[__SOURCE](2-how-to-use/1-setting.md)
 # 2.1. 설정
 
 `[F2: 시스템] - 4: 응용 파라미터 - 15: 태스크 데몬`을 선택하십시오.
@@ -84,11 +96,15 @@ arcon, lvs, multipass, cv.wait, heightsen, 등...
 - `[F3: 정지]` : RUN 혹은 WAITING 상태의 태스크 데몬을 정지시킵니다. `STOP` (정지) 버튼을 누르는 것과 같은 개념입니다.
 
 - `[F7: 확인]` : 설정을 저장하고, 설정 화면을 닫습니다. `자동 실행`으로 설정한 태스크 데몬은 실행을 시작합니다.
+
+[__SOURCE](2-how-to-use/2-monitoring.md)
 # 2.2. 모니터링
 
 ![태스크 데몬 모니터링](../_assets/monitoring.png)
 
 `창조정 - [F1: 선택] - 멀티태스크` 모니터링 창에서 태스크 데몬의 현재 프로그램 카운터를 확인할 수 있습니다.
+
+[__SOURCE](2-how-to-use/3-job-editing.md)
 # 2.3. job 편집
 
 태스크 데몬의 메인 job 프로그램이나 서브 job 프로그램들은 자유롭게 편집할 수 있습니다. 다만 이 프로그램들이 호출 스택에 있을 때(즉, 실행 중에 있을 때)에 명령문 삽입/삭제를 수행하면, 아래와 같은 확인 대화상자가 나타납니다.
@@ -98,16 +114,22 @@ arcon, lvs, multipass, cv.wait, heightsen, 등...
 `[ENTER]` 키를 누르면, 해당 태스크 데몬이 정지 및 리셋됩니다. `[ESC]` 키를 누르면, 편집이 취소됩니다.
 
 또한 호출 스택에 있는 job 프로그램을 삭제하면, 해당 daemon 실행이 동작이 중단되고 초기화됩니다.
+
+[__SOURCE](appendices/README.md)
 # 별첨
 
   
 
 
+
+[__SOURCE](appendices/rules-occupational-safety.md)
 # 산업안전보건기준에 관한 규칙 및 안전검사 고시
 
 당해 산업용 로봇은 산업안전보건기준에 관한 규칙 및 안전검사 고시(검사 대상일 경우)의 검사 기준을 고려하여 설치하여야 한다.
 
 "[산업안전보건기준에 관한 규칙](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+
+[__SOURCE](quality-assurance.md)
 # 품질보증
 
 "[품질보증](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
