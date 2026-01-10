@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# Hi6 로봇제어기 기능설명서 - 태스크 데몬 (Task Daemon)
+# ${cont_model} 로봇제어기 기능설명서 - 태스크 데몬 (Task Daemon)
 
 [__SOURCE](1-overview/README.md)
 # 1. 개요
@@ -10,7 +10,7 @@
 
 본 설명서를 잘 이해하기 위해서는 아래의 지식을 갖추고 있어야 합니다.
 
-* [Hi6 로봇제어기 조작설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-Hi6-tp630/README)
+* [${cont_model} 로봇제어기 조작설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-${cont_model}-tp630/README)
 
 [__SOURCE](1-overview/2-about.md)
 # 1.2 태스크 데몬 (Task Daemon) 기능에 대해서
@@ -19,7 +19,7 @@
 이 기능은 V60.30-00 및 이후 버전부터 지원됩니다.
 {% endhint %}
 
-일반적으로 Hi6 제어기의 job 프로그램은 자동모드일 때, 혹은 수동모드이면서 StepFWD를 누르고 있을 때만 수행됩니다.
+일반적으로 ${cont_model} 제어기의 job 프로그램은 자동모드일 때, 혹은 수동모드이면서 StepFWD를 누르고 있을 때만 수행됩니다.
 
 그러나 때로는, 이러한 재생 조건이 아닐 때에도, 백그라운드에서 job 프로그램을 실행해야 할 경우가 있습니다. 
 가령, 제어기의 현재 상태를 외부로 보고하는 네트워크 서비스 기능을 job으로 구현했다면, 이 job은 위와 같은 재생 조건과 무관하게 항상 실행되고 있어야 유용할 것입니다.
