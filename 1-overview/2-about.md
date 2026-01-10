@@ -4,7 +4,7 @@
 This feature is supported from V60.30-00 and later versions.
 {% endhint %}
 
-Generally, the job program of the Hi6 controller is executed only in automatic mode or when the StepFWD is pressed in manual mode.
+Generally, the job program of the ${cont_model} controller is executed only in automatic mode or when the StepFWD is pressed in manual mode.
 
 However, there might be instances where it is necessary to run the job program in the background even when these playback conditions are not met. 
 For example, if a network service function that reports the current status of the controller externally is implemented as a job, it would be beneficial for this job to always run regardless of the aforementioned playback conditions.

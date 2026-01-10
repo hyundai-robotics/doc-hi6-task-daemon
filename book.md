@@ -1,14 +1,22 @@
-﻿# Hi6 Robot Controller Function Manual - Task Daemon# 1. Overview# 1.1 Prerequisites
+﻿
+[__SOURCE](README.md)
+# ${cont_model} Robot Controller Function Manual - Task Daemon
+[__SOURCE](1-overview/README.md)
+# 1. Overview
+[__SOURCE](1-overview/1-prerequisite.md)
+# 1.1 Prerequisites
 
 To understand this manual well, you should have the following knowledge.
 
-* [Hi6 Robot Controller Operation Manual](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/english-Hi6-tp630/README)# 1.2 About the Task Daemon Function
+* [${cont_model} Robot Controller Operation Manual](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/README)
+[__SOURCE](1-overview/2-about.md)
+# 1.2 About the Task Daemon Function
 
 {% hint style="info" %}
 This feature is supported from V60.30-00 and later versions.
 {% endhint %}
 
-Generally, the job program of the Hi6 controller is executed only in automatic mode or when the StepFWD is pressed in manual mode.
+Generally, the job program of the ${cont_model} controller is executed only in automatic mode or when the StepFWD is pressed in manual mode.
 
 However, there might be instances where it is necessary to run the job program in the background even when these playback conditions are not met. 
 For example, if a network service function that reports the current status of the controller externally is implemented as a job, it would be beneficial for this job to always run regardless of the aforementioned playback conditions.
@@ -41,7 +49,11 @@ arcon, lvs, multipass, cv.wait, heightsen, etc...
 
 - Editing jobs running as TaskDaemon may, in some cases, stop the daemon execution of that task.
 
-{% endhint %}# 2. How to Use# 2.1. Settings
+{% endhint %}
+[__SOURCE](2-how-to-use/README.md)
+# 2. How to Use
+[__SOURCE](2-how-to-use/1-setting.md)
+# 2.1. Settings
 
 Select `[F2: system] - 4: Application parameters - 15: Task daemon`.
 
@@ -77,11 +89,15 @@ Manual operations can be performed on the currently selected task using the F ke
 - `[F2: Execution]`: Starts a task daemon in STOP, READY, or END state. This is conceptually the same as pressing the `START` button.
 - `[F3: Stop]`: Stops a task daemon in RUN or WAITING state. This is conceptually the same as pressing the `STOP` button.
 
-- `[F7: OK]`: Saves the settings and closes the settings screen. Task daemons set with `Auto exe.` will start execution.# 2.2. Monitoring
+- `[F7: OK]`: Saves the settings and closes the settings screen. Task daemons set with `Auto exe.` will start execution.
+[__SOURCE](2-how-to-use/2-monitoring.md)
+# 2.2. Monitoring
 
 ![Task daemon monitoring](../_assets/monitoring.png)
 
-In the `pane layout - [F1: select] - multitask` monitoring window, you can check the current program counter of the task daemon.# 2.3. Editing jobs
+In the `pane layout - [F1: select] - multitask` monitoring window, you can check the current program counter of the task daemon.
+[__SOURCE](2-how-to-use/3-job-editing.md)
+# 2.3. Editing jobs
 
 The main job program or sub job programs of the task daemon can be edited freely. However, if you perform command insertion/deletion while these programs are in the call stack (i.e., while they are running), a confirmation dialog like the one below will appear.
 
@@ -89,10 +105,16 @@ The main job program or sub job programs of the task daemon can be edited freely
 
 Pressing the `[ENTER]` key will stop and reset the corresponding task daemon. Pressing the `[ESC]` key will cancel the editing.
 
-Additionally, if you delete a job program that is in the call stack, the corresponding daemon execution will be halted and initialized.# Attachment# Rules and Notices on Occupational Safety and Health Standards
+Additionally, if you delete a job program that is in the call stack, the corresponding daemon execution will be halted and initialized.
+[__SOURCE](appendices/README.md)
+# Attachment
+[__SOURCE](appendices/rules-occupational-safety.md)
+# Rules and Notices on Occupational Safety and Health Standards
 
 The industrial robot in question must be installed considering the inspection criteria of the Rules and Notices on Occupational Safety and Health Standards (in case of inspection target).
 
-"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"# Quality Assurance
+"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+[__SOURCE](quality-assurance.md)
+# Quality Assurance
 
 "[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"

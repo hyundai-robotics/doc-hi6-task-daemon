@@ -1,15 +1,12 @@
 ﻿{
     "langCode": "en",
-    "series": "Hi6 Controller",
+    "series": "${cont_model} Controller",
     "title": "Function Manual - Task Daemon",
     "publisher": "HD Hyundai Robotics",
     "tocTitle": "Table of Contents",
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
-    "variables": {
-        "cont_model": "Hi6"
-    },
-    "docId": "HI6TASKDAEMON_EN_001",
+    "docId": "${cont_model:upper}TASKDAEMON_EN_001",
     "references": [
-        { "rpath" : "doc-hi6-operation/english-Hi6-tp630" }
+        { "rpath" : "doc-hi6-operation/en-tp630" }
     ]
 }
