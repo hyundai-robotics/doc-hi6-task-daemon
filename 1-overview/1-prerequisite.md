@@ -1,4 +1,4 @@
-# 1.1 Prerequisites
+﻿# 1.1 Prerequisites
 
 To understand this manual well, you should have the following knowledge.
 

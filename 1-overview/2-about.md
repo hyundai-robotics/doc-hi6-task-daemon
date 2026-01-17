@@ -1,4 +1,4 @@
-# 1.2 About the Task Daemon Function
+﻿# 1.2 About the Task Daemon Function
 
 {% hint style="info" %}
 This feature is supported from V60.30-00 and later versions.

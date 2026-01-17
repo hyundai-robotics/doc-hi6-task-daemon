@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# ${cont_model} Robot Controller Function Manual - Task Daemon
+# ${cont_model} Controller Function Manual - Task Daemon
 [__SOURCE](1-overview/README.md)
 # 1. Overview
 [__SOURCE](1-overview/1-prerequisite.md)
@@ -113,8 +113,8 @@ Additionally, if you delete a job program that is in the call stack, the corresp
 
 The industrial robot in question must be installed considering the inspection criteria of the Rules and Notices on Occupational Safety and Health Standards (in case of inspection target).
 
-"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/en/README)"
 [__SOURCE](quality-assurance.md)
 # Quality Assurance
 
-"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
+"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/en/README)"

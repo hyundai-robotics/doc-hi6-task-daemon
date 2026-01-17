@@ -1,4 +1,4 @@
-# 2.3. Editing jobs
+﻿# 2.3. Editing jobs
 
 The main job program or sub job programs of the task daemon can be edited freely. However, if you perform command insertion/deletion while these programs are in the call stack (i.e., while they are running), a confirmation dialog like the one below will appear.
 

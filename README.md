@@ -1,1 +1,1 @@
-# ${cont_model} Robot Controller Function Manual - Task Daemon
+﻿# ${cont_model} Controller Function Manual - Task Daemon

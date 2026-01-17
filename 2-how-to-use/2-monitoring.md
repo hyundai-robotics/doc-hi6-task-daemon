@@ -1,4 +1,4 @@
-# 2.2. Monitoring
+﻿# 2.2. Monitoring
 
 ![Task daemon monitoring](../_assets/monitoring.png)
 

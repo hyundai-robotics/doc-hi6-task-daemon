@@ -1,6 +1,6 @@
-# Table of contents
+﻿# Table of contents
 
-* [${cont_model} Robot Controller Function Manual - Task Daemon](README.md)
+* [${cont_model} Controller Function Manual - Task Daemon](README.md)
 * [1. Overview](1-overview/README.md)
   * [1.1 Prerequisites](1-overview/1-prerequisite.md)
   * [1.2 About the Task Daemon Function](1-overview/2-about.md)

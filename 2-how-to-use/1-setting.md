@@ -1,4 +1,4 @@
-# 2.1. Settings
+﻿# 2.1. Settings
 
 Select `[F2: system] - 4: Application parameters - 15: Task daemon`.
 
