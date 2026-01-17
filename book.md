@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# ${cont_model} 로봇제어기 기능설명서 - 태스크 데몬 (Task Daemon)
+# ${cont_model} 제어기 기능설명서 - 태스크 데몬 (Task Daemon)
 
 [__SOURCE](1-overview/README.md)
 # 1. 개요
@@ -10,7 +10,7 @@
 
 본 설명서를 잘 이해하기 위해서는 아래의 지식을 갖추고 있어야 합니다.
 
-* [${cont_model} 로봇제어기 조작설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/korean-${cont_model}-tp630/README)
+* [${cont_model} 제어기 조작설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/README)
 
 [__SOURCE](1-overview/2-about.md)
 # 1.2 태스크 데몬 (Task Daemon) 기능에 대해서
@@ -127,9 +127,9 @@ arcon, lvs, multipass, cv.wait, heightsen, 등...
 
 당해 산업용 로봇은 산업안전보건기준에 관한 규칙 및 안전검사 고시(검사 대상일 경우)의 검사 기준을 고려하여 설치하여야 한다.
 
-"[산업안전보건기준에 관한 규칙](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+"[산업안전보건기준에 관한 규칙](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/ko/README)"
 
 [__SOURCE](quality-assurance.md)
 # 품질보증
 
-"[품질보증](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
+"[품질보증](https://hrbook-hrc.web.app/#/view/quality-assurance/ko/README)"
