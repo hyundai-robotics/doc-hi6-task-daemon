@@ -1,6 +1,11 @@
 ﻿
 [__SOURCE](README.md)
 # ${cont_model} Controller Function Manual - Task Daemon
+[__SOURCE](0-about-this-manual/precautions.md)
+# Precautions
+
+{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/en/precautions.md" %}
+
 [__SOURCE](1-overview/README.md)
 # 1. Overview
 [__SOURCE](1-overview/1-prerequisite.md)
