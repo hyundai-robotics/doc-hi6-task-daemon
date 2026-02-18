@@ -1,125 +1,105 @@
 ﻿
-[__SOURCE](README.md)
-# ${cont_model} Controller Function Manual - Task Daemon
-[__SOURCE](0-about-this-manual/precautions.md)
-# Precautions
-
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/en/precautions.md" %}
-
 [__SOURCE](1-overview/README.md)
-# 1. Overview
+# 1. 概述
 [__SOURCE](1-overview/1-prerequisite.md)
-# 1.1 Prerequisites
+# 1.1 先决条件
 
-To understand this manual well, you should have the following knowledge.
+要很好地理解本手册，您应该具备以下知识。
 
-* [${cont_model} Robot Controller Operation Manual](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/README)
+* [${cont_model} 机器人控制器操作手册](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/README)
 [__SOURCE](1-overview/2-about.md)
-# 1.2 About the Task Daemon Function
+# 1.2 关于任务守护进程功能
 
 {% hint style="info" %}
-This feature is supported from V60.30-00 and later versions.
+此功能自 V60.30-00 及更高版本开始支持。
 {% endhint %}
 
-Generally, the job program of the ${cont_model} controller is executed only in automatic mode or when the StepFWD is pressed in manual mode.
+一般而言，${cont_model} 控制器的作业程序仅在自动模式下执行，或在手动模式下按下 StepFWD 时执行。
 
-However, there might be instances where it is necessary to run the job program in the background even when these playback conditions are not met. 
-For example, if a network service function that reports the current status of the controller externally is implemented as a job, it would be beneficial for this job to always run regardless of the aforementioned playback conditions.
+然而，可能会出现即使在未满足这些播放条件的情况下，也需要在后台运行作业程序的情况。例如，如果实现一个网络服务功能以外部报告控制器的当前状态作为作业，则无论上述播放条件如何，让此作业始终运行将会是有益的。
 
-By utilizing the Task Daemon function, you can assign a specific job to a desired task and ensure it runs continuously regardless of playback conditions.
+通过利用任务守护进程功能，您可以将特定作业分配给所需的任务，并确保它始终持续运行，无论播放条件如何。
 
 {% hint style="info" %}
-A daemon refers to a program that runs continuously in the background, usually handling service requests from external systems.
+守护进程是指在后台持续运行的程序，通常处理来自外部系统的服务请求。
 {% endhint %}
 
 {% hint style="warning" %}
 
-The TaskDaemon function has the following restrictions:
+TaskDaemon 功能有以下限制：
 
-- Step commands such as `move` are ignored without errors. In other words, the robot or auxiliary axes cannot be moved.
+- 步骤命令如 `移动 (move)` 被忽略而没有错误。换句话说，机器人或辅助轴无法移动。
 
-- Task 0 or task numbers in use by multitasking features cannot be used as daemons.
+- 使用多任务功能的任务 0 或任务编号不能用作守护进程。
 
-- Most commands such as the ones listed below do not function.
+- 大多数命令如下所列，不会起作用。
 
 ```python
 cowork, axisctrl, filter, brake_check, gasp_check, softxyz, fctrl, softjoint, toolchng, load_esti, etc...
 ```
 
-- Most robotic application commands do not function.
+- 大多数机器人应用程序命令不会起作用。
 
 ```python
 arcon, lvs, multipass, cv.wait, heightsen, etc...
 ```
 
-- Editing jobs running as TaskDaemon may, in some cases, stop the daemon execution of that task.
+- 编辑作为 TaskDaemon 运行的作业在某些情况下可能会停止该任务的守护进程执行。
 
 {% endhint %}
 [__SOURCE](2-how-to-use/README.md)
-# 2. How to Use
+# 2. 如何使用
 [__SOURCE](2-how-to-use/1-setting.md)
-# 2.1. Settings
+# 2.1. 设置
 
-Select `[F2: system] - 4: Application parameters - 15: Task daemon`.
+选择 `[F2: 系统] - 4: 应用参数 - 15: 15：任务守护进程 ([F2: system] - 4: Application parameters - 15: Task daemon)`。
 
-![Task Daemon Menu](../_assets/menu.png)
+![任务守护进程菜单](../_assets/menu.png)
 
 <br>
 
-A settings screen like the one below will open.  
-Settings can be configured for Task 1 to Task 7. (Task 0 cannot be used as a daemon.)
+将打开如下所示的设置界面。  
+可以为任务 1 到任务 7 配置设置。（任务 0 不能作为守护进程使用。）
 
-- If you enter a job number in the `job no.` field, the task will be set to run as a daemon using that number as the main program.  
-If set to 0, that task will not be used as a daemon. In other words, it is in the daemon OFF state.
+- 如果您在 `作业编号 (job no.)` 字段中输入工作编号，该任务将设置为使用该编号作为主程序运行的守护进程。  
+如果设置为 0，则该任务将不作为守护进程使用。换句话说，它处于守护进程关闭状态。
 
-- Checking `Auto exe.` will automatically execute the daemon when the settings are completed or when the controller is booted.
-- Checking `Repeat` will repeat the job CYCLE from the beginning once it is completed. This is conceptually the same as setting the `[F7: cond.set] - Operation cycle type` to `Continuous`.
+- 勾选 `自动执行 (Auto exe.)` 将在设置完成或控制器启动时自动执行守护进程。
+- 勾选 `重复 (Repeat)` 将在作业完成后从头开始重复作业循环。这在概念上与将 `[F7: 条件设置] - 操作循环类型 ([F7: cond.set] - Operation cycle type)` 设置为 `连续 (Continuous)` 相同。
 
-- The `Status` field displays the current state of the task along with the current program counter (program number/step number/function number) in parentheses.
+- `状态 (Status)` 字段显示任务的当前状态以及当前程序计数器（程序编号/步骤编号/功能编号）在括号中。
 
-  - OFF: The state where it is not used as a daemon.
-  - OCCUPIED: A task currently in use due to multitasking. It cannot be used as a daemon.
-  - READY: The state waiting to be started from the program header.
-  - RUN: The state where the daemon is currently playing.
-  - STOP: The state where execution has stopped.
-  - WAITING: The state waiting at `delay` statements, `wait` statements, `input` statements, etc.
-  - ERROR: The state where an error has occurred. An error code may also be displayed.
-  - END: The state where the job CYCLE has been completed.
+  - OFF: 不作为守护进程使用的状态。
+  - OCCUPIED: 由于多任务而当前正在使用的任务。它不能作为守护进程使用。
+  - READY: 等待从程序头部启动的状态。
+  - RUN: 守护进程当前正在运行的状态。
+  - STOP: 执行已停止的状态。
+  - WAITING: 在 `延迟 (delay)` 语句、`wait` 语句、`input` 语句等处等待的状态。
+  - ERROR: 发生错误的状态。可能还会显示错误代码。
+  - END: 工作循环已完成的状态。
 
-![Task Daemon Settings Screen](../_assets/setting.png)
+![任务守护进程设置界面](../_assets/setting.png)
 
-Manual operations can be performed on the currently selected task using the F keys at the bottom.
+可以使用底部的 F 键对当前选定的任务执行手动操作。
 
-- `[F1: Reset]`: Stops the selected task and performs a reset. This is conceptually the same as executing `R0,[ENTER]`. All call information and local variables are cleared, and the program counter is reset to the main program header position.
-- `[F2: Execution]`: Starts a task daemon in STOP, READY, or END state. This is conceptually the same as pressing the `START` button.
-- `[F3: Stop]`: Stops a task daemon in RUN or WAITING state. This is conceptually the same as pressing the `STOP` button.
+- `[F1: 重置] ([F1: Reset])`: 停止选择的任务并执行重置。这在概念上与执行 `R0,[ENTER]` 相同。所有调用信息和局部变量都被清除，程序计数器重置为主程序头位置。
+- `[F2: 执行] ([F2: Execution])`: 启动处于 STOP、READY 或 END 状态的任务守护进程。这在概念上与按下 `START` 按钮相同。
+- `[F3: 停止] ([F3: Stop])`: 停止处于 RUN 或 WAITING 状态的任务守护进程。这在概念上与按下 `STOP` 按钮相同。
 
-- `[F7: OK]`: Saves the settings and closes the settings screen. Task daemons set with `Auto exe.` will start execution.
+- `[F7: 确认] ([F7: OK])`: 保存设置并关闭设置界面。设置为 `自动执行 (Auto exe.)` 的任务守护进程将开始执行。
 [__SOURCE](2-how-to-use/2-monitoring.md)
-# 2.2. Monitoring
+# 2.2. 监控
 
-![Task daemon monitoring](../_assets/monitoring.png)
+![任务守护进程监控](../_assets/monitoring.png)
 
-In the `pane layout - [F1: select] - multitask` monitoring window, you can check the current program counter of the task daemon.
+在 `窗格布局 - [F1: 选择] - 多任务 (pane layout - [F1: select] - multitask)` 监控窗口中，您可以检查任务守护进程的当前程序计数器。
 [__SOURCE](2-how-to-use/3-job-editing.md)
-# 2.3. Editing jobs
+# 2.3. 编辑任务
 
-The main job program or sub job programs of the task daemon can be edited freely. However, if you perform command insertion/deletion while these programs are in the call stack (i.e., while they are running), a confirmation dialog like the one below will appear.
+任务守护程序的主任务程序或子任务程序可以自由编辑。然而，如果在这些程序处于调用栈中（即，它们正在运行时）执行命令插入/删除，将会出现如下的确认对话框。
 
-![Stop and Reset Confirmation Dialog](../_assets/stop_reset_dialog.png)
+![停止和重置确认对话框](../_assets/stop_reset_dialog.png)
 
-Pressing the `[ENTER]` key will stop and reset the corresponding task daemon. Pressing the `[ESC]` key will cancel the editing.
+按下 `[ENTER]` 键将停止并重置相应的任务守护程序。按下 `[ESC]` 键将取消编辑。
 
-Additionally, if you delete a job program that is in the call stack, the corresponding daemon execution will be halted and initialized.
-[__SOURCE](appendices/README.md)
-# Attachment
-[__SOURCE](appendices/rules-occupational-safety.md)
-# Rules and Notices on Occupational Safety and Health Standards
-
-The industrial robot in question must be installed considering the inspection criteria of the Rules and Notices on Occupational Safety and Health Standards (in case of inspection target).
-
-"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/en/README)"
-[__SOURCE](quality-assurance.md)
-# Quality Assurance
-
-"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/en/README)"
+此外，如果您删除一个在调用栈中的任务程序，相应的守护程序执行将被暂停并初始化。

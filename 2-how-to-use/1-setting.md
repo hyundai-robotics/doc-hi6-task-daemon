@@ -1,37 +1,37 @@
-﻿# 2.1. Settings
+﻿# 2.1. 设置
 
-Select `[F2: system] - 4: Application parameters - 15: Task daemon`.
+选择 `[F2: 系统] - 4: 应用参数 - 15: 15：任务守护进程 ([F2: system] - 4: Application parameters - 15: Task daemon)`。
 
-![Task Daemon Menu](../_assets/menu.png)
+![任务守护进程菜单](../_assets/menu.png)
 
 <br>
 
-A settings screen like the one below will open.  
-Settings can be configured for Task 1 to Task 7. (Task 0 cannot be used as a daemon.)
+将打开如下所示的设置界面。  
+可以为任务 1 到任务 7 配置设置。（任务 0 不能作为守护进程使用。）
 
-- If you enter a job number in the `job no.` field, the task will be set to run as a daemon using that number as the main program.  
-If set to 0, that task will not be used as a daemon. In other words, it is in the daemon OFF state.
+- 如果您在 `作业编号 (job no.)` 字段中输入工作编号，该任务将设置为使用该编号作为主程序运行的守护进程。  
+如果设置为 0，则该任务将不作为守护进程使用。换句话说，它处于守护进程关闭状态。
 
-- Checking `Auto exe.` will automatically execute the daemon when the settings are completed or when the controller is booted.
-- Checking `Repeat` will repeat the job CYCLE from the beginning once it is completed. This is conceptually the same as setting the `[F7: cond.set] - Operation cycle type` to `Continuous`.
+- 勾选 `自动执行 (Auto exe.)` 将在设置完成或控制器启动时自动执行守护进程。
+- 勾选 `重复 (Repeat)` 将在作业完成后从头开始重复作业循环。这在概念上与将 `[F7: 条件设置] - 操作循环类型 ([F7: cond.set] - Operation cycle type)` 设置为 `连续 (Continuous)` 相同。
 
-- The `Status` field displays the current state of the task along with the current program counter (program number/step number/function number) in parentheses.
+- `状态 (Status)` 字段显示任务的当前状态以及当前程序计数器（程序编号/步骤编号/功能编号）在括号中。
 
-  - OFF: The state where it is not used as a daemon.
-  - OCCUPIED: A task currently in use due to multitasking. It cannot be used as a daemon.
-  - READY: The state waiting to be started from the program header.
-  - RUN: The state where the daemon is currently playing.
-  - STOP: The state where execution has stopped.
-  - WAITING: The state waiting at `delay` statements, `wait` statements, `input` statements, etc.
-  - ERROR: The state where an error has occurred. An error code may also be displayed.
-  - END: The state where the job CYCLE has been completed.
+  - OFF: 不作为守护进程使用的状态。
+  - OCCUPIED: 由于多任务而当前正在使用的任务。它不能作为守护进程使用。
+  - READY: 等待从程序头部启动的状态。
+  - RUN: 守护进程当前正在运行的状态。
+  - STOP: 执行已停止的状态。
+  - WAITING: 在 `延迟 (delay)` 语句、`wait` 语句、`input` 语句等处等待的状态。
+  - ERROR: 发生错误的状态。可能还会显示错误代码。
+  - END: 工作循环已完成的状态。
 
-![Task Daemon Settings Screen](../_assets/setting.png)
+![任务守护进程设置界面](../_assets/setting.png)
 
-Manual operations can be performed on the currently selected task using the F keys at the bottom.
+可以使用底部的 F 键对当前选定的任务执行手动操作。
 
-- `[F1: Reset]`: Stops the selected task and performs a reset. This is conceptually the same as executing `R0,[ENTER]`. All call information and local variables are cleared, and the program counter is reset to the main program header position.
-- `[F2: Execution]`: Starts a task daemon in STOP, READY, or END state. This is conceptually the same as pressing the `START` button.
-- `[F3: Stop]`: Stops a task daemon in RUN or WAITING state. This is conceptually the same as pressing the `STOP` button.
+- `[F1: 重置] ([F1: Reset])`: 停止选择的任务并执行重置。这在概念上与执行 `R0,[ENTER]` 相同。所有调用信息和局部变量都被清除，程序计数器重置为主程序头位置。
+- `[F2: 执行] ([F2: Execution])`: 启动处于 STOP、READY 或 END 状态的任务守护进程。这在概念上与按下 `START` 按钮相同。
+- `[F3: 停止] ([F3: Stop])`: 停止处于 RUN 或 WAITING 状态的任务守护进程。这在概念上与按下 `STOP` 按钮相同。
 
-- `[F7: OK]`: Saves the settings and closes the settings screen. Task daemons set with `Auto exe.` will start execution.
+- `[F7: 确认] ([F7: OK])`: 保存设置并关闭设置界面。设置为 `自动执行 (Auto exe.)` 的任务守护进程将开始执行。

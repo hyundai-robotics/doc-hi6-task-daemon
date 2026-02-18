@@ -1,5 +1,5 @@
-﻿# 1.1 Prerequisites
+﻿# 1.1 先决条件
 
-To understand this manual well, you should have the following knowledge.
+要很好地理解本手册，您应该具备以下知识。
 
-* [${cont_model} Robot Controller Operation Manual](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/README)
+* [${cont_model} 机器人控制器操作手册](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/README)
