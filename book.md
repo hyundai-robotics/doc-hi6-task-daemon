@@ -1,4 +1,10 @@
 ﻿
+[__SOURCE](README.md)
+# ${cont_model} 控制器功能手册 - 任务守护程序
+[__SOURCE](0-about-this-manual/precautions.md)
+# 注意事项
+
+{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/zh/precautions.md" %}
 [__SOURCE](1-overview/README.md)
 # 1. 概述
 [__SOURCE](1-overview/1-prerequisite.md)
@@ -103,3 +109,15 @@ arcon, lvs, multipass, cv.wait, heightsen, etc...
 按下 `[ENTER]` 键将停止并重置相应的任务守护程序。按下 `[ESC]` 键将取消编辑。
 
 此外，如果您删除一个在调用栈中的任务程序，相应的守护程序执行将被暂停并初始化。
+[__SOURCE](appendices/README.md)
+# 附件
+[__SOURCE](appendices/rules-occupational-safety.md)
+##### 职业安全与健康标准的规则和通知
+
+所涉及的工业机器人必须在考虑《职业安全与健康标准的规则和通知》的检查标准的情况下进行安装（如为检查目标）。
+
+"[职业安全与健康标准的规则](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/en/README)"
+[__SOURCE](quality-assurance.md)
+# 质量保证
+
+"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/en/README)"
