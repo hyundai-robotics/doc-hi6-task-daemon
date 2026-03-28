@@ -4,7 +4,7 @@
 [__SOURCE](0-about-this-manual/precautions.md)
 # 注意事项
 
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/zh/precautions.md" %}
+{% include file="zh/precautions.md" %}
 [__SOURCE](1-overview/README.md)
 # 1. 概述
 [__SOURCE](1-overview/1-prerequisite.md)
@@ -12,7 +12,7 @@
 
 要很好地理解本手册，您应该具备以下知识。
 
-* [${cont_model} 机器人控制器操作手册](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/README)
+* [${cont_model} 机器人控制器操作手册](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/zh-tp630/README?cont_model=${cont_model})
 [__SOURCE](1-overview/2-about.md)
 # 1.2 关于任务守护进程功能
 
@@ -116,8 +116,8 @@ arcon, lvs, multipass, cv.wait, heightsen, etc...
 
 所涉及的工业机器人必须在考虑《职业安全与健康标准的规则和通知》的检查标准的情况下进行安装（如为检查目标）。
 
-"[职业安全与健康标准的规则](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/en/README)"
+"[职业安全与健康标准的规则](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/zh/README)"
 [__SOURCE](quality-assurance.md)
 # 质量保证
 
-"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/en/README)"
+"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/zh/README)"
