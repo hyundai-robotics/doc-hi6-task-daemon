@@ -5,7 +5,7 @@
 [__SOURCE](0-about-this-manual/precautions.md)
 # 사전 주의사항
 
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/ko/precautions.md" %}
+{% include file="ko/precautions.md" %}
 
 [__SOURCE](1-overview/README.md)
 # 1. 개요
@@ -15,7 +15,7 @@
 
 본 설명서를 잘 이해하기 위해서는 아래의 지식을 갖추고 있어야 합니다.
 
-* [${cont_model} 제어기 조작설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/README)
+* [${cont_model} 제어기 조작설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/ko-tp630/README?cont_model=${cont_model})
 
 [__SOURCE](1-overview/2-about.md)
 # 1.2 태스크 데몬 (Task Daemon) 기능에 대해서
