@@ -4,7 +4,7 @@
 [__SOURCE](0-about-this-manual/precautions.md)
 # Precautions
 
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/en/precautions.md" %}
+{% include file="en/precautions.md" %}
 
 [__SOURCE](1-overview/README.md)
 # 1. Overview
@@ -13,7 +13,7 @@
 
 To understand this manual well, you should have the following knowledge.
 
-* [${cont_model} Robot Controller Operation Manual](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/README)
+* [${cont_model} Robot Controller Operation Manual](https://hrbook-hrc.web.app/#/view/doc-hi6-operation/en-tp630/README?cont_model=${cont_model})
 [__SOURCE](1-overview/2-about.md)
 # 1.2 About the Task Daemon Function
 
