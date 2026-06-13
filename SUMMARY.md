@@ -1,7 +1,9 @@
 ﻿# Table of contents
 
 * [${cont_model} 控制器功能手册 - 任务守护程序](README.md)
-* [注意事项](0-about-this-manual/precautions.md)
+* [关于手册](0-about-this-manual/README.md)
+  * [注意事项](0-about-this-manual/precautions.md)
+  * [安全注意事项](0-about-this-manual/safety-notice.md)
 * [1. 概述](1-overview/README.md)
   * [1.1 先决条件](1-overview/1-prerequisite.md)
   * [1.2 关于任务守护进程功能](1-overview/2-about.md)
