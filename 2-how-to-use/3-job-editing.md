@@ -1,9 +1,9 @@
-﻿# 2.3. Editing jobs
+﻿# 2.3. 编辑任务
 
-The main job program or sub job programs of the task daemon can be edited freely. However, if you perform command insertion/deletion while these programs are in the call stack (i.e., while they are running), a confirmation dialog like the one below will appear.
+任务守护进程的主作业程序或子作业程序可以自由编辑。然而，如果在这些程序处于调用栈中（即正在运行时）执行命令插入/删除，则会出现如下确认对话框。
 
-![Stop and Reset Confirmation Dialog](../_assets/stop_reset_dialog.png)
+![停止和重置确认对话框](../_assets/stop_reset_dialog.png)
 
-Pressing the `[ENTER]` key will stop and reset the corresponding task daemon. Pressing the `[ESC]` key will cancel the editing.
+按 `[ENTER]` 键将停止并重置相应的任务守护进程。按 `[ESC]` 键将取消编辑。
 
-Additionally, if you delete a job program that is in the call stack, the corresponding daemon execution will be halted and initialized.
+此外，如果您删除一个在调用栈中的作业程序，相应的守护进程执行将被暂停并初始化。

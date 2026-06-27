@@ -1,40 +1,40 @@
-﻿# 1.2 About the Task Daemon Function
+﻿# 1.2 关于任务守护进程功能
 
 {% hint style="info" %}
-This feature is supported from V60.30-00 and later versions.
+该功能从 V60.30-00 及更高版本开始支持。
 {% endhint %}
 
-Generally, the job program of the ${cont_model} controller is executed only in automatic mode or when the StepFWD is pressed in manual mode.
+一般来说，${cont_model} 控制器的作业程序仅在自动模式下执行，或在手动模式下按下 StepFWD 时执行。
 
-However, there might be instances where it is necessary to run the job program in the background even when these playback conditions are not met. 
-For example, if a network service function that reports the current status of the controller externally is implemented as a job, it would be beneficial for this job to always run regardless of the aforementioned playback conditions.
+然而，有时可能需要在不满足这些播放条件的情况下在后台运行作业程序。 
+例如，如果将报告控制器当前状态的网络服务功能实现为作业，那么让该作业始终运行，无论前述播放条件如何，都是有利的。
 
-By utilizing the Task Daemon function, you can assign a specific job to a desired task and ensure it runs continuously regardless of playback conditions.
+通过利用任务守护进程功能，您可以将特定作业分配给所需任务，并确保在播放条件下持续运行。
 
 {% hint style="info" %}
-A daemon refers to a program that runs continuously in the background, usually handling service requests from external systems.
+守护进程指的是一个在后台持续运行的程序，通常处理来自外部系统的服务请求。
 {% endhint %}
 
 {% hint style="warning" %}
 
-The TaskDaemon function has the following restrictions:
+任务守护进程功能有以下限制：
 
-- Step commands such as `move` are ignored without errors. In other words, the robot or auxiliary axes cannot be moved.
+- 像 `移动 (move)` 这样的步进命令被忽略而没有错误。换句话说，机器人或辅助轴不能移动。
 
-- Task 0 or task numbers in use by multitasking features cannot be used as daemons.
+- 使用多任务功能的任务 0 或任务编号不能作为守护进程使用。
 
-- Most commands such as the ones listed below do not function.
-
-```python
-cowork, axisctrl, filter, brake_check, gasp_check, softxyz, fctrl, softjoint, toolchng, load_esti, etc...
-```
-
-- Most robotic application commands do not function.
+- 大多数命令，例如下面列出的一些命令不起作用。
 
 ```python
-arcon, lvs, multipass, cv.wait, heightsen, etc...
+cowork, axisctrl, filter, brake_check, gasp_check, softxyz, fctrl, softjoint, toolchng, load_esti, 等...
 ```
 
-- Editing jobs running as TaskDaemon may, in some cases, stop the daemon execution of that task.
+- 大多数机器人应用命令不起作用。
+
+```python
+arcon, lvs, multipass, cv.wait, heightsen, 等...
+```
+
+- 编辑作为任务守护进程运行的作业可能在某些情况下会停止该任务的守护进程执行。
 
 {% endhint %}

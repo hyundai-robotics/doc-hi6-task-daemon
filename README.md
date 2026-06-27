@@ -1,1 +1,1 @@
-﻿# ${cont_model} Controller Function Manual - Task Daemon
+# ${cont_model} 控制器功能手册 - 任务守护进程
